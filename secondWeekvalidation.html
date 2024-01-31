@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validclass</title>
+    <style>
+        table,tr,td{
+            border-radius: 5px;
+            border: 2px solid blueviolet;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>User information</legend>
+        <form action="#" autocomplete="off" onsubmit="return check">
+            <table style="width: 60%" align ="center" cellpadding="10" cellspacing="10">
+                <tr><td><input type="text" id="name" placeholder="enter your name" required><span id="name1"></span></td></tr>
+                <tr><td><input type="password" id="password" placeholder="enter your password"><span id="password1"></span></td></tr>
+                <tr><td><input type="text" id="conpass" placeholder="confirm password"><span id="conpass1"></span></td></tr>
+                <tr><td><input type="text" id="mob" placeholder="enter your mobile number"><span id="mob1"></span></td></tr>
+                <tr><td><input type="email" id="email" placeholder="enter your email"><span id="email1"></span></td></tr>
+                <tr><td><input type="submit" id="button" placeholder="Submit"><span id="button1" ></span></td></tr>
+            </table>
+        </form>
+        <script>
+            var a=document.getElementById('name').value;
+            function check(){
+                var a =  document.getElementById("name").value;
+                var b = document.getElementById(password).value;
+                if(a==""){
+                    document.getElementById('name1').innerHTML="it should not be null";
+                }
+            }
+        </script>
+    </fieldset>
+    <script>
+        
+    </script>
+</body>
+</html>
