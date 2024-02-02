@@ -1,0 +1,53 @@
+<!-- Use all mouse events when you add the image of your self and when certain mouse events is applied it will display your bio in the web page whe your images double clicked then you use on click 
+
+
+part b 
+
+
+when you hover the mouse on mouse out on mouse up on mouse down on the phot of albert it will diplay the following things
+
+1 force  = ma
+2. table of two
+3 newtons three laws -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            font-size: 20px;
+            width: 100%;
+        }
+
+        .container img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer; /* Set cursor to pointer for better user experience */
+        }
+    </style>
+    <script>
+        function displayBio(event) {
+            const bioContainer = document.getElementById('bio-container');
+            bioContainer.innerHTML = 'Your bio information goes here.';
+        }
+
+        function resetBio() {
+            const bioContainer = document.getElementById('bio-container');
+            bioContainer.innerHTML = '';
+        }
+    </script>
+</head>
+<body>
+    <h2>Mouse events</h2>
+
+    <div class="container">
+        <img src="/image/apj.jpeg" alt="Your Image" ondblclick="displayBio()" onclick="resetBio()">
+    </div>
+
+    <div id="bio-container"></div>
+</body>
+</html>
