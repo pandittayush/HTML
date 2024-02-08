@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Window Open And Close Events</h2>
+    <button id="btn1" onclick="opening()">Open Window</button>
+    <button id="btn2" onclick="closing()">Close Window</button>
+
+    <script>
+        var a;
+
+        function opening() {
+            // Calculate the position to center the window
+            var left   = (window.screen.width - 200) / 2;
+            var top = (window.screen.height - 200) / 2;
+            
+            a = window.open('http://www.google.com/', '', 'width=200,height=200,left=' + left + ',top=' + top);
+        }
+    
+        function closing() {
+            if (a) {
+                a.close();
+            }
+        }
+    </script>
+</body>
+</html>

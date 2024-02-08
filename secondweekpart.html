@@ -1,0 +1,103 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            color: black;
+            background-color: blue;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        Keyboard events
+    </h2>
+    <input type="text" placeholder="OnkeyDown" class="one" onkeydown="alert(this.value)"><br> <br>
+    <input type="text" placeholder="Onkeyuo" class="two" onkeydown="alert(this.value)"><br> <br>
+    <input type="text" placeholder="Onkeypress" class="three" onkeydown="alert(this.value)"><br> <br>
+
+
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+    <style>
+        .red { background-color: red; }
+        .green { background-color: green; }
+        .blue { background-color: blue; }
+    </style>
+    <script>
+        function changeColor(color, element) {
+            element.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="OnKeyDown" class="one red" onkeydown="alert(this.value)" onclick="changeColor('red', this)"><br><br>
+    <input type="text" placeholder="OnKeyUp" class="two green" onkeyup="alert(this.value)" onclick="changeColor('green', this)"><br><br>
+    <input type="text" placeholder="OnKeyPress" class="three blue" onkeypress="alert(this.value)" onclick="changeColor('blue', this)"><br><br>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background Color</title>
+  <style>
+    body {
+      transition: background-color 0.3s ease-in-out;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #inputDiv {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #inputDiv input[type="text"] {
+      width: 200px;
+      padding: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="inputDiv">
+  Type "red" to change background color:
+  <input type="text" id="colorInput" oninput="changeBackgroundColor()">
+</div>
+
+<script>
+  function changeBackgroundColor() {
+    var colorInput = document.getElementById('colorInput').value.toLowerCase();
+    if (colorInput === 'yellow') {
+      document.body.style.backgroundColor = 'yellow';
+    } else {
+      document.body.style.backgroundColor = 'red'; // Default background color
+    }
+  }
+</script>
+
+</body>
+</html>
+

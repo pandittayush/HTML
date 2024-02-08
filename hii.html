@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Text Box Color</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #inputDiv {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #inputDiv input[type="text"] {
+      width: 200px;
+      padding: 5px;
+      font-size: 16px;
+      background-color: white; /* Default background color */
+      transition: background-color 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+    <h2>Keyboard events</h2>
+
+<div id="inputDiv">
+  Type color name to change box color:
+  <input type="text" id="colorInput" oninput="changeBoxColor()">
+</div>
+
+<script>
+  function changeBoxColor() {
+    var colorInput = document.getElementById('colorInput').value.toLowerCase();
+    var colorBox = document.getElementById('colorInput');
+    if (colorInput === 'yellow') {
+      colorBox.style.backgroundColor = 'yellow';
+    }
+    else if
+        (colorInput === 'pink') {
+      colorBox.style.backgroundColor = 'pink';
+
+    }
+    else if
+    (colorInput === 'blue') {
+      colorBox.style.backgroundColor = 'blue';
+    }
+    else {
+      colorBox.style.backgroundColor = 'white'; // Default background color
+    }
+}
+</script>
+
+</body>
+</html>
