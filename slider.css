@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 main{
+    overflow: hidden;
     width: 50%;
     height: 300px;
     box-shadow: 0 0 7px green;
