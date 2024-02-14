@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Display</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0; /* Light mode background */
+    }
+    .container {
+        text-align: center;
+        color: #333; /* Text color */
+    }
+    img {
+        width: 150px;
+        filter: brightness(100%); /* Normal brightness */
+    }
+    #startBtn, #stopBtn {
+        padding: 10px 20px;
+        background-color: #007bff; /* Blue */
+        color: #fff; /* White text */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    #startBtn:hover, #stopBtn:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+    /* Dark mode */
+    .dark-mode {
+        background-color: #333; /* Dark mode background */
+        color: #f0f0f0; /* Light text */
+    }
+    .dark-mode img {
+        filter: brightness(80%); /* Slightly dimmed in dark mode */
+    }
+    .dark-mode #startBtn, .dark-mode #stopBtn {
+        background-color: #333; /* Dark mode button background */
+        color: #fff; /* White text */
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img id="watchImg" src="Image/watch.git.gif" alt="Watch">
+    <br><br>
+    <button id="startBtn">Start</button>
+    <button id="stopBtn">Stop</button>
+    <p id="timeDisplay"></p>
+    <button id="darkModeBtn">Enable Dark Mode</button>
+</div>
+
+<script>
+let timerInterval;
+
+document.getElementById("startBtn").addEventListener("click", function() {
+    // Clear any existing timer
+    clearInterval(timerInterval);
+    // Start displaying the current time every second
+    timerInterval = setInterval(displayTime, 1000);
+});
+
+document.getElementById("stopBtn").addEventListener("click", function() {
+    // Stop the timer
+    clearInterval(timerInterval);
+});
+
+document.getElementById("darkModeBtn").addEventListener("click", function() {
+    // Toggle dark mode
+    document.body.classList.toggle("dark-mode");
+});
+
+function displayTime() {
+    let currentTime = new Date();
+    let hours = currentTime.getHours();
+    let minutes = currentTime.getMinutes();
+    let seconds = currentTime.getSeconds();
+    // Add leading zeros if necessary
+    hours = (hours < 10 ? "0" : "") + hours;
+    minutes = (minutes < 10 ? "0" : "") + minutes;
+    seconds = (seconds < 10 ? "0" : "") + seconds;
+    // Display the current time
+    document.getElementById("timeDisplay").textContent = hours + ":" + minutes + ":" + seconds;
+}
+</script>
+
+</body>
+</html>

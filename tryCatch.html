@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exception Handling in JavaScript</title>
+</head>
+<body>
+<script>
+function displayCValue() {
+    try {
+        var a = 10; // Initializing variable a
+        var b = 5;  // Initializing variable b
+        // Attempting to display the value of variable c
+        console.log("Value of c:", c); // This line will cause a ReferenceError
+    } catch (error) {
+        console.error("Error:", error.message);
+        console.error("Variable c is not declared or defined.");
+    }
+}
+
+// Calling the function to demonstrate
+displayCValue();
+</script>
+
+</body>
+</html>

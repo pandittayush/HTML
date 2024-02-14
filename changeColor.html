@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button and Circle Color Change</title>
+<style>
+  #circle {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 2px solid black; /* Border initially */
+    border-radius: 50%; /* Border radius initially */
+    transition: background-color 0.5s ease, border-radius 0.5s ease; /* Added border-radius transition */
+  }
+</style>
+</head>
+<body>
+
+<button id="colorButton">Change Color</button>
+<div id="circle"></div>
+
+<script>
+  const button = document.getElementById('colorButton');
+  const circle = document.getElementById('circle');
+  let isOrange = false;
+
+  button.addEventListener('click', () => {
+    if (isOrange) {
+      circle.style.backgroundColor = 'transparent';
+      circle.style.borderRadius = '0'; // Reset border radius
+    } else {
+      circle.style.backgroundColor = 'orange';
+      circle.style.borderRadius = '50%'; // Remove border radius
+    }
+    isOrange = !isOrange;
+  });
+</script>
+
+</body>
+</html>
