@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Changing Boxes</title>
+<style>
+    .container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    .box {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        transition: background-color 0.3s ease;
+    }
+    #box1 { background-color: transparent; }
+    #box2 { background-color: transparent; }
+    #box3 { background-color: transparent; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+</div>
+
+<div class="container">
+    <button onclick="changeColors(1)">Change Colors 1</button>
+    <button onclick="changeColors(2)">Change Colors 2</button>
+    <button onclick="changeColors(3)">Change Colors 3</button>
+</div>
+
+<script>
+let colorChange = [false, false, false]; // To track the state of color change
+
+function changeColors(clickedBox) {
+    let boxes = document.querySelectorAll('.box');
+    let otherBoxes = [];
+    for (let i = 0; i < boxes.length; i++) {
+        if (i + 1 !== clickedBox) {
+            otherBoxes.push(boxes[i]);
+        }
+    }
+    // If color change is already applied, revert to transparent
+    if (colorChange[clickedBox - 1]) {
+        for (let i = 0; i < otherBoxes.length; i++) {
+            otherBoxes[i].style.backgroundColor = 'transparent';
+        }
+        colorChange[clickedBox - 1] = false; // Reset state
+    } else {
+        // Change color from transparent to a random color
+        for (let i = 0; i < otherBoxes.length; i++) {
+            otherBoxes[i].style.backgroundColor = getRandomColor();
+        }
+        colorChange[clickedBox - 1] = true; // Update state
+    }
+}
+
+function getRandomColor() {
+    // Generate a random color in hex format
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
+</script>
+
+</body>
+</html>

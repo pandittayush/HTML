@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div#wrapper{
+    margin: 25px auto 0px auto;
+    width: 75%;
+
+    
+}
+div#wrapper h1{
+    display: block;
+    background-color: #203d3a;
+    color: #fff;
+    text-align: center;
+    line-height: 65px;
+    border-radius: 20px 20px 0px 0px;
+}
+div#wrapper img{
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+/* div#wrapper img:hover{
+    filter: grayscale(0%); 
+}Mouse lagao colorfull hatao 
+toh black&whaite ab same cheez js se karenge
+*/
+div#block1,div#block2{
+    width: 100%;
+    float: left;
+    margin-top: 25px;
+}

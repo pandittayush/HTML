@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mickey Mouse with Eye Color Change</title>
+<style>
+    #mickey {
+        width: 200px;
+        height: 200px;
+        /* background-color: black; */
+        border-radius: 50%;
+        position: relative;
+        border: 2px solid black;
+    }
+    body{
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+    }
+    .ear {
+        width: 80px;
+        height: 80px;
+        /* background-color: black; */
+        border-radius: 50%;
+        position: absolute;
+        border: 2px solid black;
+    }
+    #leftEar {
+        top: -43px;
+        left: -43px;
+    }
+    #rightEar {
+        top: -43px;
+        right: -43px;
+    }
+    .eye {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        border: 2px solid black;
+    }
+    #leftEye {
+        top: 70px;
+        left: 60px;
+    }
+    #rightEye {
+        top: 70px;
+        left: 120px;
+    }
+</style>
+</head>
+<body>
+<div id="mickey">
+    <div id="leftEar" class="ear"></div>
+    <div id="rightEar" class="ear"></div>
+    <div id="leftEye" class="eye"></div>
+    <div id="rightEye" class="eye"></div>
+    <div id="nose" class="noses"></div>
+</div>
+<br>
+<!-- <button onclick="changeEyeColor('leftEye', 'black')">Change Left Eye to Black</button> -->
+<!-- <button onclick="changeEyeColor('rightEye', 'green')">Change Right Eye to Green</button> -->
+
+<!-- <script>
+    function changeEyeColor(eyeId, color) {
+        document.getElementById(eyeId).style.backgroundColor = color;
+    }
+</script> -->
+</body>
+</html>

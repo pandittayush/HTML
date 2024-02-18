@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #btn,#btn1,#one{
+            border: 2px solid black;
+            width: auto;
+            margin-top: 30px;
+            width: 100px;
+            height: 34px;
+            /* margin: auto; */
+            
+            
+        }
+        body{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">click</button>
+    <button id="btn1">stop</button>
+    <button id="one">0</button>
+    <!-- <div id="two"></div> -->
+
+<script>
+    var counter = 0;
+    var a = document.getElementById("btn").addEventListener("click",counter1)
+    var d = document.getElementById("btn1").addEventListener("click",counter2)
+    var b = document.getElementById("btn").addEventListener("mouseover",colorChange)
+    var c = document.getElementById("btn").addEventListener("mouseout",colorChange2)
+    
+
+    function counter1(){
+        document.getElementById("one").innerText=counter;
+        counter++;
+    }
+    function counter2(){
+        counter--;
+        document.getElementById("one").innerText=counter;
+    }
+
+    function colorChange(){
+        document.getElementById("one").style.color = "red";
+    }
+    function colorChange2(){
+        document.getElementById("one").style.color = "green";
+    }
+</script>
+</body>
+
+</html>
+
+
+
+<!-- create four function called add subtract division multiplication and also create four buton use add even listener and make a basic calculattor -->
+
+
+<!-- task 2
+ -->
+<!-- 
+ create div one para heading1,2,3 & 4 by using create element append child teyxt sontent properties in java
+  script make sure your div willl be a square box and all the elements will be placed on the div. -->
+
+  <!-- Task3
+ -->
+ <!-- create a micky mouse by using circle and create two button and when you click the first button the eye color change to  black and when you click o the second button second eye color changes to green    -->

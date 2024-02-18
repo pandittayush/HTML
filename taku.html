@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background Color</title>
+  <style>
+    body {
+      transition: background-color 0.3s ease-in-out;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #inputDiv {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #inputDiv input[type="text"] {
+      width: 200px;
+      padding: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="inputDiv">
+  Type "nude pink" or enter hex code #D68BB3 to change background color:
+  <input type="text" id="colorInput" oninput="changeBackgroundColor()">
+</div>
+
+<script>
+  function changeBackgroundColor() {
+    var colorInput = document.getElementById('colorInput').value.toLowerCase();
+    if (colorInput === 'nude pink') {
+      document.body.style.backgroundColor = '#D68BB3';
+    } else {
+      document.body.style.backgroundColor = colorInput;
+    }
+  }
+</script>
+
+</body>
+</html>

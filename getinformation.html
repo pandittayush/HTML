@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Photos and Information</title>
+<style>
+  #photoContainer {
+    text-align: center;
+  }
+  .photo {
+    display: none;
+    max-width: 100%;
+    height: auto;
+  }
+  #photoInfo {
+    display: none;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<button id="button1">Show Photo 1</button>
+<button id="button2">Show Photo 2</button>
+
+<div id="photoContainer">
+  <img id="photo1" class="photo" src="Image/Aryabhata-5_(1).jpg" alt="Photo 1">
+  <img id="photo2" class="photo" src="Image/Portrait_of_Sir_Isaac_Newton,_1689_(brightened).jpg" alt="Photo 2">
+</div>
+
+<div id="photoInfo">
+  <p id="info1">Information about Photo 1</p>
+  <p id="info2">Information about Photo 2</p>
+</div>
+
+<script>
+  const button1 = document.getElementById('button1');
+  const button2 = document.getElementById('button2');
+  const photo1 = document.getElementById('photo1');
+  const photo2 = document.getElementById('photo2');
+  const info1 = document.getElementById('info1');
+  const info2 = document.getElementById('info2');
+  const photoInfo = document.getElementById('photoInfo');
+
+  button1.addEventListener('click', () => {
+    photo2.style.display = 'none';
+    info2.style.display = 'none';
+    photo1.style.display = 'block';
+    info1.style.display = 'block';
+    photoInfo.style.display = 'block';
+  });
+
+  button2.addEventListener('click', () => {
+    photo1.style.display = 'none';
+    info1.style.display = 'none';
+    photo2.style.display = 'block';
+    info2.style.display = 'block';
+    photoInfo.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
