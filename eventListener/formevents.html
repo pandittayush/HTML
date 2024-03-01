@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="jquery-3.7.1.min.js"></script>
+<body>
+    <form autocomplete="off">
+        <input type="text"  id="one">
+        <input type="password"  id="two">
+        <select name="subjects" id="three">
+            <option value="OS">OS</option>
+            <option value="Dsa">DSA</option>
+            <option value="HTML">HTML</option>
+        </select>
+        <button type="submit" id="sub">Submit</button>
+    </form>
+    <script>
+
+        // #1------------
+
+        $(document).ready(function() {
+            $("#one,#two").focus(function(){
+                
+                $("#one,#two").css("backgroundColor","pink");
+            });
+            })
+            // #2---------
+
+        $(document).blur(function() {
+            $("#one,#two").focus(function(){
+                
+                $("#one,#two").css("backgroundColor","blue");
+            });
+            })
+            // #3----------
+
+        $(document).change(function() {
+            $("#three").focus(function(){
+                
+                $("#three").css("backgroundColor","yellow");
+            });
+            })
+            // #4-----------
+
+        $(document).select(function() {
+            $("#one,#two").focus(function(){
+                
+                $("#one,#two").css("backgroundColor","white");
+            });
+            })
+            // #5------------
+
+        var parent = document.querySelector('#sub');
+        parent.addEventListener("click" ,function (){
+            // console.log("1");
+            // console.log("1 2");
+            // console.log("1 2 3");
+            // console.log("1 2 3 4");
+
+        });
+        let pattern = '';
+        for (let i = 1; i <= 5; i++) {
+        pattern += i;
+        console.log(pattern);
+    }
+
+        // var childern = document.querySelector('#c1');
+        // childern.addEventListener("click", function (){
+        //     console.log("Child is invoked");
+            
+        // });
+    </script>
+</body>
+</html>

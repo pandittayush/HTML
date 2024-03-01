@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+
+}
+.flowerA{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+#flower2{
+    height: 30px;
+    left: 120px;
+    top: 50px;
+    transform: rotate(-21deg);
+
+}
+.flowerB{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+#flower3{
+    height: 30px;
+    left: 100px;
+    top: 50px;
+    transform: rotate(-42deg);
+
+}
+.flowerC{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+#flower4{
+    height: 30px;
+    left: 90px;
+    top: 50px;
+    transform: rotate(42deg);
+
+}
+.flowerD{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+#flower5{
+    height: 30px;
+    left: 110px;
+    top: 50px;
+    transform: rotate(21deg);
+
+}

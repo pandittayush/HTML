@@ -11,7 +11,7 @@ body{
 #face{
     border-radius: 50%;
     width: 200px;
-    height: 191px;
+    height: 182px;
     position: relative;
     border: 2px solid black;
     /* border-radius: 0px 0px 20px 20px; */
@@ -41,6 +41,13 @@ body{
     height: 50px;
     border: 2px solid black;
 }
+.eye1{
+    position: absolute;
+    border-radius: 50%;
+    width: 18px;
+    height: 28px;
+    border: 2px solid black;
+}
 #leftEye{
     left: 32px;
     top: 40px;
@@ -49,6 +56,16 @@ body{
 #rightEye{
     left: 108px;
     top: 40px;
+    transform: rotate(-21deg);
+}
+#leftEye1{
+    left: 40px;
+    top: 46px;
+    transform: rotate(21deg);
+}
+#rightEye2{
+    left: 113px;
+    top: 46px;
     transform: rotate(-21deg);
 }
 .noses{

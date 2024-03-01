@@ -1,0 +1,76 @@
+<!-- create  a image in a button and the imgage could be aryabhatt and buttton name would be
+     and factorial Whenever you are applying add Event listner on teh button the image 
+     of aryabhat will dispear at the place table will be apperar-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryabhatt</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content:center;
+    }
+    .Image{
+        width: 100px;
+        height: 100px;
+    }
+    .table{
+        width: 300px;
+        height: 200px;
+        border: 2px solid black;
+    }
+    #button1{
+        margin-top: 50%;
+        width: 40px;
+        height: 30px;
+        border: 2px solid black;
+    }
+    #button2{
+        margin-top: 50%;
+        width: 40px;
+        height: 30px;
+        border: 2px solid black;
+    }
+    #button3{
+        margin-top: 50%;
+        width: 60px;
+        height: 30px;
+        border: 2px solid black;
+    }
+
+</style>
+<body>
+    <div class="table">
+        
+        <div id="imageContainer"></div>
+    </div>
+    <button id="button1">click</button>
+    <button id="button2">table</button>
+    <button id="button3">factorial</button>
+    
+
+
+    <script>
+
+    document.getElementById("button1").addEventListener("click", displayImage);
+
+function displayImage() {
+    var imageDisplayed = document.getElementById("displayedImage");
+    if (!imageDisplayed) {
+        var imgElement = document.createElement("img");
+
+        imgElement.src = ;
+        imgElement.id = "displayedImage";
+
+        // Append the image element to the image container
+        var imageContainer = document.getElementById("imageContainer");
+        imageContainer.appendChild(imgElement);
+    }
+}
+
+    </script>
+</body>
+</html>

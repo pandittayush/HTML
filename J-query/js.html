@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"> 
+ 
+    </script>
+    <style>
+       #box{
+        height:70px;
+        width:300px;
+        border: 2px solid green;
+        overflow:auto;
+       }
+    </style>
+</head>
+<body>
+    <div id="box">
+ <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente corporis non quos commodi dicta quaerat beatae accusamus. Quasi, 
+    exercitationem nam. Dolores laboriosam repellat, voluptatum sint expedita accusamus nulla et culpa illum eos, magni ad accusantium vel. 
+    Facilis voluptates suscipit eius iste molestiae asperiores pariatur voluptatum neque expedita consequuntur a odit odio amet debitis
+     natus tenetur dolor est doloribus dolorem quod sint, aperiam labore. Laudantium, provident amet eligendi maiores nostrum ipsam ab 
+     dolores illo voluptatum odit dolor porro molestiae neque architecto libero pariatur quam. Veniam voluptatum voluptate beatae itaque 
+     reiciendis est, magni nihil iure corporis, similique voluptatem quas earum, iusto recusandae aliquid animi amet vero delectus porro 
+     minima ex repudiandae rem! Aut dolor aliquid quidem fuga accusantium quod nulla libero molestiae neque, repudiandae et? Quo dolores in,
+      totam rem, quos aut impedit optio similique cupiditate dolorem nostrum temporibus vitae ut laboriosam nemo explicabo ratione 
+      perferendis mollitia fugiat cum nihil, ducimus alias!     </p>
+    </div>
+    <script>
+   $(document).ready(function(){
+       $("body").keydown(function(){
+           $("#box").css("backgroundColor","orange");
+       });
+       $("body").keyup(function(){
+           $("#box").css("backgroundColor","pink");
+       });
+        // $("#box").click(function(){
+        //     $("body").css("backgroundColor","orange");
+        // });
+        // $("#box").contextmenu(function(){
+        //     $("body").css("backgroundColor","blue");
+        // });
+        // $("#box").mouseenter(function(){
+        //     $("body").css("backgroundColor","brown");
+        // });
+        // $("#box").mouseleave(function(){
+        //     $("body").css("backgroundColor","green");
+        // });
+    });
+</script>
+</body>
+</html>

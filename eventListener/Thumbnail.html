@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #main, #tn img{
+        box-shadow: 2px 2px 2px 2px;
+        border-radius: 10px;
+
+        /* border-radius: 4px solid black; */
+    }
+    #tn img{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+    }
+    #tn{
+        text-align: center;
+
+    }
+    #main{
+        width: 40%;
+        height: 300px;
+        display: block;
+        margin: 20px auto;
+    } 
+</style>
+<body>
+    <img src="Image/bird-colorful-colorful-flowers-generative-ai_206725-752.avif" alt="" id="main">
+    <div id="tn">
+        <img src="Image/thambu1.jpeg" alt="">
+        <img src="Image/thambu2.jpeg" alt="">
+        <img src="Image/thumbu3.jpeg" alt="">
+        <img src="Image/thambu4.jpeg" alt="">
+        <img src="Image/thambu5.jpeg" alt="">
+    </div>
+    <script>
+        var a = document.getElementById('tn');
+        var b = a.getElementsByTagName('img');
+        var c = document.getElementById('main');
+        for(let i = 0; i<b.length;i++)
+        {
+            let d = b[i];
+            d.addEventListener("click",function()
+             {
+                c.src=this.src;
+                
+            }
+            )
+        }
+    </script>
+    
+</body>
+</html>
