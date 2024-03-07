@@ -1,3 +1,4 @@
+
 // ---------------Without addEventListener we can write like that-----------
 
 // document.getElementById('img1').onmouseover = abc;
